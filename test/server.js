@@ -42,6 +42,22 @@ http
         res.end();
         break;
 
+      //bonus
+      case "/Bonus/Webpage":
+        res.writeHead(200, { "Content-Type": "text/html" });
+        res.write("<html>");
+        res.write("<h1>Hello World!</h1>");
+        res.write("</html>");
+        res.end();
+        break;
+      //bonus 2
+      case "/Bonus/Redirect":
+        res.writeHead(302, {
+          Location: "http://localhost:3000/Forbidden",
+        });
+        res.end();
+        break;
+
       default:
         console.log("this is an error...");
         res.writeHead(404);
